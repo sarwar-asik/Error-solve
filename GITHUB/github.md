@@ -1,4 +1,4 @@
-﻿# Error-solve
+# Error-solve
 
 #### 1. (github)
     $ git push -u origin main
