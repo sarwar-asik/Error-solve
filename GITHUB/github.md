@@ -1,5 +1,4 @@
 # Error-solve
-
 #### 1. (github)
     $ git push -u origin main
         remote: Repository not found.
