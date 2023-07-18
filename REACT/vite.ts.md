@@ -26,3 +26,9 @@
             'plugin:react-hooks/recommended',
             "./tsconfig.json",
         ],
+
+
+### 3 npm run build is not working for vite typeScript React >>>
+##  3 Solve::: change the config in package.json
+
+     "build": " vite build",

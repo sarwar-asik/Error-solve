@@ -1,9 +1,11 @@
-#  My error [vite react ts project] >>>
+# My error [vite react ts project] :::>>>
 
 ### 1 Error for every html in [vite react ts project]::::
+
     Property 'div' does not exist on type 'JSX.IntrinsicElements'.
 
 ### 1 solve : (run the command)
+
     npm install --save-dev @types/react@latest @types/react-dom@latest
 
 #### 2 Error start every modules >>>
@@ -27,14 +29,14 @@
             "./tsconfig.json",
         ],
 
-# Github ::::
+# Github ::::>>>
 
             # Error-solve
             #### 1. (github)
                 $ git push -u origin main
                     remote: Repository not found.
-                    fatal: repository 'https://github.com/sarwar-asik/Ready-Baend1.git/' not found 
-            #### 1. solve 
+                    fatal: repository 'https://github.com/sarwar-asik/Ready-Baend1.git/' not found
+            #### 1. solve
                 git credential-manager uninstall
                 git credential-manager install
                 git remote remove origin
