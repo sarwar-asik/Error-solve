@@ -2,4 +2,6 @@
 
 ## Solve::: change the config in package.json
 
+```json
      "build": " vite build",
+```

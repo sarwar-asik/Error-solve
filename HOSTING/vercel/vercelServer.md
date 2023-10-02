@@ -1,6 +1,7 @@
 ## Vercel hosting the server
 
 ### Vercel এ ডেপ্লয় এর ক্ষেত্রে কয়েকটি জিনিস খেয়ালরাখতে হবে Sits config.jso ("./dist" is very important)
+```json
 
     "module": "commonjs" / Specify what module code is generated. */*,
 
@@ -10,10 +11,13 @@
 
     for all emitted files. */*,
 
+```
+
 ### এই কনফিগটি add করে নিতে হবে যদি আগে থেকে করা না থাকে
 
 ### ২। package.json এর মধ্যে
 
+```json
         "scripts": {
 
         "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
@@ -23,8 +27,10 @@
         "build": "tsc"
         }
 
+```
 ### ৩। প্রজেক্টের রুট এর মধ্যে vercel.json ফাইল বানিইয়ে নিতে হবে
 
+ ```json
         {
 
             "version": 2,
@@ -42,9 +48,13 @@
             ]
         }
 
+ ```
 ### এরপর Cli দিয়ে deploy করে নিলেই কাজ শেষ 
              
+```bash
              tsc 
              vercel
              vercel --prod
 
+
+```
