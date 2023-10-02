@@ -27,6 +27,7 @@
 #### 2. SOlve :::: (copy the code in .eslintrc.cjs)
 
  ```json
+ 
      "./tsconfig.json",
 
        extends: [
