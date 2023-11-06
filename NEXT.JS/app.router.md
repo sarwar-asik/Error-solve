@@ -7,7 +7,7 @@
 - Redux
 - axios for RTK query
 
-# My Error is in console >>>
+# 1. My Error is in console >>>
 
 ```js
 Warning: Extra attributes from the server: data-new-gr-c-s-check-loaded,data-gr-ext-installed
@@ -44,6 +44,56 @@ Warning: Extra attributes from the server: data-new-gr-c-s-check-loaded,data-gr-
 </html>
 ```
 
-### project url 
+### project url
 
 https://github.com/sarwar-asik/um-frontend
+
+### 2. Hydration Error
+
+```ts
+Unhandled Runtime Error
+Error: Hydration failed because the initial UI does not match what was rendered on the server.
+
+See more info here: https://nextjs.org/docs/messages/react-hydration-error
+
+Call Stack
+```
+
+### solve the error by 2 system by
+
+- remove wrong nested mistake
+- use import dynamic from "next/dynamic"
+- using useEffect and condition
+
+**system-1**
+
+```tsx
+import dynamic from "next/dynamic";
+
+export default dynamic(() => Promise.resolve(Navbar), {
+  ssr: false,
+});
+```
+
+**system-2**
+
+```tsx
+ const [isClient, setClient] = useState(false);
+
+  useEffect(() => {
+    setClient(true);
+  }, []);
+
+
+  return (
+    <div>
+      <div className="">
+            {isClient && <SideBar />} /// used isClient
+          </div>
+     {isClient && user?.role ? (   
+          <UserAvatar userId={user?.id} />
+        ) } /// used isClient
+    </div>
+  )
+
+```
