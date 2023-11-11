@@ -90,7 +90,7 @@ export default dynamic(() => Promise.resolve(Navbar), {
       <div className="">
             {isClient && <SideBar />} /// used isClient
           </div>
-     {isClient && user?.role ? (   
+     {isClient && user?.role ? (
           <UserAvatar userId={user?.id} />
         ) } /// used isClient
     </div>
